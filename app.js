@@ -7,7 +7,7 @@ angular.module( 'sample', [
   'sample.login',
   'auth0'
 ])
-.config( function ( RestangularProvider, $urlRouterProvider, authProvider) {
+.config( function ( RestangularProvider, $urlRouterProvider, authProvider, $httpProvider) {
 
   authProvider.init({
     domain: 'samples.auth0.com',
@@ -16,7 +16,9 @@ angular.module( 'sample', [
     loginState: 'login'
   });
 
-  RestangularProvider.setBaseUrl('http://auth0-test-todo-api.herokuapp.com/api/open');
+  RestangularProvider.setBaseUrl('http://auth0-test-todo-api.herokuapp.com/api/');
+
+  $httpProvider.interceptors.push('authInterceptor');
 
   $urlRouterProvider.otherwise('/');
 })
