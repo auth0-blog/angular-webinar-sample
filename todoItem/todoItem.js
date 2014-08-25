@@ -6,7 +6,10 @@ angular.module('sample.todoItem', [
     .state('todoItem', {
       url: '/todos/:id',
       controller: 'TodoItemCtrl',
-      templateUrl: 'todoItem/todoItem.html'
+      templateUrl: 'todoItem/todoItem.html',
+      data: {
+        requiresLogin: true
+      }
     });
 })
 .controller('TodoItemCtrl', function($scope, $stateParams, Restangular) {

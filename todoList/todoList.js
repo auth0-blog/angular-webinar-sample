@@ -7,7 +7,10 @@ angular.module('sample.todoList', [
     .state('todoList', {
       url: '/',
       controller: 'TodoListCtrl',
-      templateUrl: 'todoList/todoList.html'
+      templateUrl: 'todoList/todoList.html',
+      data: {
+        requiresLogin: true
+      }
     });
 })
 .controller('TodoListCtrl', function($scope, Restangular) {
