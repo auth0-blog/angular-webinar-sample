@@ -24,7 +24,11 @@ angular.module( 'sample', [
 
   authProvider.on('loginSuccess', function($state) {
     $state.go('auth.todoList');
-  })
+  });
+
+  authProvider.on('loginFailure', function(error) {
+    console.log("Error loggin in", error);
+  });
 })
 .run(function(auth) {
   auth.hookEvents();

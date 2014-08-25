@@ -10,9 +10,19 @@ angular.module('sample.login', [
     });
 })
 .controller('LoginCtrl', function($scope, auth, $state) {
-  auth.signin({
-    standalone: true,
-    chrome: true
-  });
+  $scope.login = function() {
+    auth.signin({
+      connection: 'Username-Password-Authentication',
+      email: $scope.email,
+      password: $scope.password
+    });
+  }
+
+  $scope.loginWithFacebook = function() {
+    auth.signin({
+      connection: 'facebook'
+    });
+  }
+
 
 });
