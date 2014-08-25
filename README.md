@@ -1,8 +1,40 @@
-# TODO app
+# Webinar sample: TODO App.
 
 This is the TODO app sample that is used in the Angular Webinar. It has one branch per step we did on the Webinar. The video will be available soon.
 
 The steps shows how to easily move from an open TODO app where everybody sees and edits everybody's tasks to a TODO app per user where only you can see your tasks.
+
+The server that is used for this example can be [browsed here](https://github.com/auth0/in-memory-todo)
+
+## Branches
+
+### Step 0: Working TODO app
+
+We start with a working app. The tasks are shared among all users
+
+### Step 1: Adding authentication with Popup mode & Widget
+
+We add authentication to the TODO app. The tasks are still shared
+
+### Step 2: Showing user information
+
+Now, let's show user information in the header
+
+### Step 3: Calling the secured API per user
+
+We call the API Securely with the JWT. Each user now has its own tasks
+
+### Step 4: Using Redirect mode & Widget
+
+We change the authentication to do redirect mode instead of popup
+
+### Step 5: Use your custom UI for authentication
+
+Now, we use our custom UI to authenticate the user
+
+### Step 6: Doing SSO
+
+Here, you can see how 2 different apps can have SSO.
 
 ## Running the example
 
