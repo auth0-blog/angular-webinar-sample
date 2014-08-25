@@ -16,9 +16,9 @@ We start with a working app. The tasks are shared among all users
 
 We add authentication to the TODO app. The tasks are still shared
 
-### Step 2: Showing user information
+### Step 2: Showing user information and adding abstract authenticated state
 
-Now, let's show user information in the header
+Now, let's show user information in the header. For that, we'll also create an abstract ui-router authenticated state.
 
 ### Step 3: Calling the secured API per user
 

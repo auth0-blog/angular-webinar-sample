@@ -3,13 +3,10 @@ angular.module('sample.todoItem', [
 ])
 .config(function($stateProvider) {
   $stateProvider
-    .state('todoItem', {
+    .state('auth.todoItem', {
       url: '/todos/:id',
       controller: 'TodoItemCtrl',
-      templateUrl: 'todoItem/todoItem.html',
-      data: {
-        requiresLogin: true
-      }
+      templateUrl: 'todoItem/todoItem.html'
     });
 })
 .controller('TodoItemCtrl', function($scope, $stateParams, Restangular) {

@@ -1,6 +1,7 @@
 angular.module( 'sample', [
   'ui.router',
   'restangular',
+  'sample.auth',
   'sample.todoList',
   'sample.todoItem',
   'sample.login',

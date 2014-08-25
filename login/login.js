@@ -15,7 +15,7 @@ angular.module('sample.login', [
     standalone: true,
     chrome: true
   }, function() {
-    $state.go('todoList');
+    $state.go('auth.todoList');
   }, function(error) {
     console.log("Error logging in", error);
   });

@@ -4,16 +4,15 @@ angular.module('sample.todoList', [
 ])
 .config(function($stateProvider) {
   $stateProvider
-    .state('todoList', {
+    .state('auth.todoList', {
       url: '/',
       controller: 'TodoListCtrl',
-      templateUrl: 'todoList/todoList.html',
-      data: {
-        requiresLogin: true
-      }
+      templateUrl: 'todoList/todoList.html'
     });
 })
-.controller('TodoListCtrl', function($scope, Restangular) {
+.controller('TodoListCtrl', function($scope, Restangular, auth) {
+  $scope.auth = auth;
+
   Restangular.all('todos').getList().then(function(todos) {
     $scope.todos = todos;
   });
