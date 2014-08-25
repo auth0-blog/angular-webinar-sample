@@ -1,0 +1,21 @@
+<div>
+  <h1>Things you need to do</h1>
+  <ul>
+    <li ng-repeat="todo in todos">
+      <a ui-sref="todoItem({id: todo.id})">
+      {{todo.name}}
+      </a>
+    </li>
+  </ul>
+  <form name="form">
+    <div class="col-lg-3">
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="newTodo">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-default" ng-disabled="!newTodo" type="button" ng-click="add()" value="Add!" />
+        </span>
+      </div>
+    </div>
+  </form>
+
+</div>
