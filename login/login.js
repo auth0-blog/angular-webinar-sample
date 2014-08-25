@@ -11,13 +11,8 @@ angular.module('sample.login', [
 })
 .controller('LoginCtrl', function($scope, auth, $state) {
   auth.signin({
-    popup: true,
     standalone: true,
     chrome: true
-  }, function() {
-    $state.go('auth.todoList');
-  }, function(error) {
-    console.log("Error logging in", error);
   });
 
 });

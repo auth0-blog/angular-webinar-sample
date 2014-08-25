@@ -21,6 +21,10 @@ angular.module( 'sample', [
   $httpProvider.interceptors.push('authInterceptor');
 
   $urlRouterProvider.otherwise('/');
+
+  authProvider.on('loginSuccess', function($state) {
+    $state.go('auth.todoList');
+  })
 })
 .run(function(auth) {
   auth.hookEvents();
