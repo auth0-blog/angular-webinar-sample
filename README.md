@@ -32,10 +32,6 @@ We change the authentication to do redirect mode instead of popup
 
 Now, we use our custom UI to authenticate the user
 
-### Step 6: Doing SSO
-
-Here, you can see how 2 different apps can have SSO.
-
 ## Running the example
 
 In order to run the example you need to just start a server. What we suggest is doing the following:
